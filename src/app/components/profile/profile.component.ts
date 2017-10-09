@@ -3,10 +3,10 @@ import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class UserComponent implements OnInit {
+export class ProfileComponent implements OnInit {
   name: string;
   age: number;
   email: string;
@@ -32,18 +32,16 @@ export class UserComponent implements OnInit {
       city: 'Montague',
       state: 'NJ'
     };
-    // this.hobbies = ['Canada', 'Finland', 'Japan'];
+    this.hobbies = ['Canada', 'Finland', 'Japan'];
     this.hello = 'hello';
     this.dataService.getPosts().subscribe((posts) => {
       // console.log(posts);
       this.posts = posts;
     });
-    this.hobbies = this.dataService.getPostsList();
   }
 
   onClick() {
     this.hobbies.push('New Hobby');
-    this.dataService.postList.push('A new hobby');
   }
 
   addHobby(hobby) {

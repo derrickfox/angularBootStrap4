@@ -1,0 +1,21 @@
+Total : {{total}} <br>
+Correct : {{correct}} <br>
+Incorrect : {{wrong}}
+<br>
+<div class="myContainer" align="center">
+  <h1>What is the capital of...</h1>
+  <br>
+  <h1>{{correctCountry}}?</h1>
+  <br>
+  <button (click)="checkAnswer(choice1.value)" value="{{correctCapital}}" #choice1 class="btn btn-primary">{{correctCapital}}</button>
+  <button (click)="checkAnswer(choice2.value)" value="{{wrongAnswer1}}" #choice2 class="btn btn-primary">{{wrongAnswer1}}</button>
+  <button (click)="checkAnswer(choice3.value)" value="{{wrongAnswer2}}" #choice3 class="btn btn-primary">{{wrongAnswer2}}</button>
+  <button (click)="checkAnswer(choice4.value)" value="{{wrongAnswer3}}" #choice4 class="btn btn-primary">{{wrongAnswer3}}</button>
+  <br>
+  <br>
+  <div *ngIf="currentResult !== null">
+    <h1>{{currentResult}}</h1>
+    <button (click)="getNextQuestion()" class="btn btn-warning">Next Country</button>
+  </div>
+</div>
+

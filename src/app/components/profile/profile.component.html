@@ -1,0 +1,45 @@
+<div class="myContainer">
+  <div class="card" style="width: 20em;">
+    <div class="card-body">
+      <h4 class="card-title">{{name}}</h4>
+      <h6 class="card-subtitle mb-2 text-muted">Traveler</h6>
+      <p class="card-text">
+        Age : {{age}}<br>
+        Email : {{email}}<br>
+        Street : {{address.street}}<br>
+        City : {{address.city}}<br>
+        State : {{address.state}}
+      </p>
+      <button class="card-link btn alert-primary" (click)="toggleEdit()">Edit User</button>
+    </div>
+  </div>
+  <div *ngIf = isEdit>
+    <h1>Edit User</h1>
+    <form>
+      <div>
+        <label for="name">Name: </label><br>
+        <input type="text" [(ngModel)]="name" name="name">
+      </div>
+      <div>
+        <label for="age">Age: </label><br>
+        <input type="number" [(ngModel)]="age" name="age">
+      </div>
+      <div>
+        <label for="email">Email: </label><br>
+        <input type="text" [(ngModel)]="email" name="email">
+      </div>
+      <div>
+        <label for="street">Street: </label><br>
+        <input type="text" [(ngModel)]="address.street" name="street">
+      </div>
+      <div>
+        <label for="city">City: </label><br>
+        <input type="text" [(ngModel)]="address.city" name="city">
+      </div>
+      <div>
+        <label for="state">State: </label><br>
+        <input type="text" [(ngModel)]="address.state" name="state">
+      </div>
+    </form>
+  </div>
+</div>
