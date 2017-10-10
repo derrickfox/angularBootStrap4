@@ -1,6 +1,4 @@
-# A4app
-
-This is the sandbox app from the "Angular 4 In 60 Minutes" Youtube video
+# Angular 4 Bootstrap 4 App Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
 
