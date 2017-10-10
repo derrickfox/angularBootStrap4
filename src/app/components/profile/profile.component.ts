@@ -6,6 +6,12 @@ import { DataService } from '../../services/data.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+/**
+ * This creates a component for the user's profile
+ * @param name Name of user
+ * @param age Age of user
+ * @returns A user's profile object
+ */
 export class ProfileComponent implements OnInit {
   name: string;
   age: number;
