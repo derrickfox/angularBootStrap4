@@ -13,12 +13,14 @@ import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { CountryComponent } from './components/country/country.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CardComponent } from './components/card/card.component';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 
 const appRoutes: Routes = [
   {path: '', component: UserComponent},
   {path: 'about', component: AboutComponent},
   {path: 'country', component: CountryComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent},
+  {path: 'progress', component: ProgressBarComponent}
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     TopNavComponent,
     CountryComponent,
     ProfileComponent,
-    CardComponent
+    CardComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,7 @@ export class CountryComponent implements OnInit {
   correct: number;
   wrong: number;
   total: number;
+  widthObject: Object;
 
   constructor(private dataService: DataService) { }
 
@@ -53,6 +54,10 @@ export class CountryComponent implements OnInit {
     this.wrongAnswer2 = this.countries[this.wrongIndex2].capital;
     this.wrongAnswer3 = this.countries[this.wrongIndex3].capital;
     this.currentResult = null;
+    this.widthObject = {
+      "width" : `${this.wrong}%`
+    };
+    console.log(this.widthObject);
   }
 
   checkAnswer(choice) {
