@@ -15,6 +15,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { CardComponent } from './components/card/card.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const appRoutes: Routes = [
   {path: '', component: UserComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   {path: 'country', component: CountryComponent},
   {path: 'profile', component: ProfileComponent},
   {path: 'progress', component: ProgressBarComponent},
-  {path: 'timeline', component: TimelineComponent}
+  {path: 'timeline', component: TimelineComponent},
+  {path: 'slider', component: SliderComponent}
 ];
 
 @NgModule({
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     ProfileComponent,
     CardComponent,
     ProgressBarComponent,
-    TimelineComponent
+    TimelineComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
