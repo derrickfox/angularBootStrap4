@@ -14,13 +14,15 @@ import { CountryComponent } from './components/country/country.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { CardComponent } from './components/card/card.component';
 import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 
 const appRoutes: Routes = [
   {path: '', component: UserComponent},
   {path: 'about', component: AboutComponent},
   {path: 'country', component: CountryComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'progress', component: ProgressBarComponent}
+  {path: 'progress', component: ProgressBarComponent},
+  {path: 'timeline', component: TimelineComponent}
 ];
 
 @NgModule({
@@ -32,7 +34,8 @@ const appRoutes: Routes = [
     CountryComponent,
     ProfileComponent,
     CardComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    TimelineComponent
   ],
   imports: [
     BrowserModule,

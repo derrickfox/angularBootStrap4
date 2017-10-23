@@ -1,0 +1,52 @@
+.bar-step {
+  position:absolute;
+  margin-top:-20px;
+  z-index:1;
+  font-size:12px;
+}
+
+.label-txt {
+  float: left;
+  font-size: large;
+  color: grey;
+}
+
+.label-percent {
+  font-size: large;
+  color: grey;
+}
+
+.label-line {
+  float: right;
+  background: grey;
+  height:30px;
+  width:2px;
+  margin-left: 5px;
+}
+
+.label-percent {
+  float: right;
+  margin-left: -10px;
+}
+
+.progress-bar {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: x-large;
+}
+
+#kickOffText {
+  font-size: x-large;
+  font-weight: 400;
+}
+
+#dateText {
+  font-size: x-large;
+  font-weight: 100;
+}
+
+#makeMargin {
+  margin-left: 15px;
+
+}
