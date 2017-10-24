@@ -1,0 +1,7 @@
+#carouselExampleIndicators{
+  background-color: black;
+}
+
+.carousel {
+  interval: pause;
+}

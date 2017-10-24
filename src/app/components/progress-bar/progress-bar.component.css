@@ -37,3 +37,10 @@
   font-size: x-large;
   font-weight: 200;
 }
+
+.progress-bar {
+  height: 40px;
+  line-height: 50px;
+  text-align: center;
+  font-size: x-large;
+}

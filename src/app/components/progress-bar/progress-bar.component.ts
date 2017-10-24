@@ -11,6 +11,7 @@ export class ProgressBarComponent implements OnInit {
   wrong: number;
   stage: string;
   step: string;
+  testConfig: any;
 
   constructor() { }
 
@@ -18,9 +19,20 @@ export class ProgressBarComponent implements OnInit {
     this.wrong = 20;
     this.stage = "Implementation";
     this.step = "Lead Development";
-  }
+    this.testConfig = [
+      {
+        label: 'Sprint 1',
+        percentage: '35'
+      },
+      {
+        label: 'Sprint 2',
+        percentage: '65'
+      },
+      {
+        label: 'Sprint 3',
+        percentage: '75'
+      }
+    ]
 
-  addProgress() {
-    this.wrong = this.wrong + 5;
   }
 }
