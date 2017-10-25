@@ -61,6 +61,7 @@ export class TimelineComponent implements OnInit {
     this.getDateRange();
     this.findStartDate();
     this.findEndDate();
+    this.totalNumberOfMonths = this.getNumOfMonths(this.beginDay, this.endDay);
   }
 
   getDateRange() {
@@ -112,19 +113,6 @@ export class TimelineComponent implements OnInit {
       }
     });
     this.endDay = latestDate;
-  }
-
-  createCell(cell) {
-    this.arrayOfWidths.push(this.getNumOfMonths(cell.startProject, cell.endProject));
-    this.arrayOfWidths.forEach(i => {
-    });
-
-    this.totalNumberOfMonths = this.getNumOfMonths(this.beginDay, this.endDay);
-    let monthsForThisCell = this.getNumOfMonths(cell.startProject, cell.endProject);
-    let percent = monthsForThisCell / this.totalNumberOfMonths;
-    percent = percent * 100;
-    return true;
-    // this.makeMargin.nativeElement.style.width = '5%';
   }
 
   drawCell(cell) {
