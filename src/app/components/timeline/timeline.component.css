@@ -8,17 +8,17 @@
 .label-txt {
   float: left;
   font-size: large;
-  color: grey;
+  color: blue;
 }
 
 .label-percent {
   font-size: large;
-  color: grey;
+  color: blue;
 }
 
 .label-line {
   float: right;
-  background: grey;
+  background: pink;
   height:30px;
   width:2px;
   margin-left: 5px;
@@ -36,30 +36,26 @@
   font-size: x-large;
 }
 
-#kickOffText {
+.kickOffText {
   font-size: x-large;
   font-weight: 400;
 }
 
-#dateText {
+.dateText {
   font-size: x-large;
   font-weight: 100;
-}
-
-#makeMargin {
-  margin-left: 15px;
-}
-
-.progress-bar {
-  filter: brightness(95%);
 }
 
 .issue {
   color: red;
 }
 
+.blockText {
+  color: yellow !important;
+  filter: none !important;
+}
+
 .timeLine {
-  background-color: lightgrey;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -67,5 +63,5 @@
 }
 
 .aBlock {
-  color: white;
+  color: blue;
 }

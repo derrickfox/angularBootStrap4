@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {forEach} from "@angular/router/src/utils/collection";
 
 @Component({
@@ -8,7 +8,6 @@ import {forEach} from "@angular/router/src/utils/collection";
 })
 
 export class TimelineComponent implements OnInit {
-  @ViewChild("makeMargin") makeMargin: ElementRef;
 
   date: Date;
   endDate: any;
@@ -19,6 +18,11 @@ export class TimelineComponent implements OnInit {
   totalNumberOfMonths: any;
   arrayOfWidths: any;
   cellBrightness: any;
+  textBrightness: any;
+  jsonObjectString: any;
+  timeLineWidths: any;
+  earliestYear: any;
+  latestYear: any;
 
   constructor() { }
 
@@ -29,39 +33,34 @@ export class TimelineComponent implements OnInit {
         name: 'Stage 1',
         startProject: new Date('9/1/2016'),
         endProject: new Date('10/31/2017'),
-        percentage: 30,
-        testColor: 'red'
       },
       {
         name: 'Stage 2',
         startProject: new Date('11/1/2017'),
         endProject: new Date('12/31/2017'),
-        percentage: 10,
-        testColor: 'blue'
       },
       {
         name: 'Stage 3',
         startProject: new Date('1/1/2018'),
         endProject: new Date('5/25/2018'),
-        percentage: 40,
-        testColor: 'green'
       },
       {
         name: 'Stage 4',
         startProject: new Date('4/26/2018'),
         endProject: new Date('7/28/2018'),
-        percentage: 25,
-        testColor: 'yellow'
       }
     ];
 
     this.cellBrightness = 100;
     this.arrayOfWidths = [];
 
+    this.jsonObjectString = JSON.stringify(this.testConfig);
+    this.timeLineWidths = [];
     this.getDateRange();
     this.findStartDate();
     this.findEndDate();
     this.totalNumberOfMonths = this.getNumOfMonths(this.beginDay, this.endDay);
+    this.drawTimeLine();
   }
 
   getDateRange() {
@@ -115,14 +114,32 @@ export class TimelineComponent implements OnInit {
     this.endDay = latestDate;
   }
 
+  drawTimeLine() {
+    let totalWidth = this.getNumOfMonths(this.beginDay, this.endDay);
+    this.earliestYear = this.startDate.getFullYear();
+    this.latestYear = this.endDate.getFullYear();
+    let monthsFifth = totalWidth * (1/5);
+    let monthsHalf = totalWidth/2;
+    let monthsThreeFifths = totalWidth * (3/5);
+
+    this.timeLineWidths.push(0);
+    this.timeLineWidths.push(monthsFifth);
+    this.timeLineWidths.push(monthsHalf);
+    this.timeLineWidths.push(monthsThreeFifths);
+    this.timeLineWidths.push(totalWidth);
+
+    return {
+      'width': '88%'
+    }
+  }
+
   drawCell(cell) {
     let thisWidth = this.getNumOfMonths(cell.startProject, cell.endProject);
     let percent = (thisWidth / this.totalNumberOfMonths) * 100;
     this.cellBrightness = this.cellBrightness - 20;
-    console.log(percent);
     return {
       'width': percent+'%',
-      'background-color': 'lightgreen',
+      'background-color': '#c4ffd8',
       'filter': `brightness(${this.cellBrightness}%)`
     }
   }
