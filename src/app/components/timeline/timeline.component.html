@@ -7,6 +7,8 @@
 </nav>
 <br>
 
+<!--TODO Not dynamic-->
+<h3 class="issue">Issue: Not dynamic</h3>
 <div class="progress" style="margin-left: 0px; height: 0px">
   <div class="progress-bar" role="progressbar" aria-valuenow="70"
        aria-valuemin="0" aria-valuemax="100" style="height: 50px;" [ngStyle]="{'width': wrong +'%'}">
@@ -85,12 +87,33 @@
   <br>
   <h4 id="kickOffText">Kick Off Date: <span id="dateText">{{date | date}}</span></h4>
 </div>
+<br><hr>
+
+<!--TODO Not all one line-->
+<h3 class="issue">Issue: Not one line</h3>
 <div *ngFor="let i of testConfig">
   <div class="progress-bar" role="progressbar" [ngStyle]="{'width': i.percentage + '%'}" style="background-color: #5fd386" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">{{i.name}}</div>
 </div>
-<br>
-<div class="progress">
-    <span *ngFor="let i of testConfig">
-      <div class="progress-bar" role="progressbar" [ngStyle]="drawCell(i)" style="background-color: #5fd386" aria-valuemin="0" aria-valuemax="100">{{i.name}}</div>
-    </span>
-</div>
+<br><hr>
+
+<!--&lt;!&ndash;TODO Each cell is acting like its own bar&ndash;&gt;-->
+<!--<h3 class="issue">Issue: Each cell is acting like its own bar</h3>-->
+<!--<div class="progress">-->
+    <!--<span *ngFor="let i of testConfig">-->
+      <!--<div class="progress-bar" role="progressbar" [ngStyle]="drawCell(i)" style="background-color: #5fd386" aria-valuemin="0" aria-valuemax="100">{{i.name}}</div>-->
+    <!--</span>-->
+<!--</div>-->
+<!--<br><hr>-->
+
+<!--<h3 class="issue">Staging Area</h3>-->
+<!--<div class="progress" *ngFor="let i of testConfig">-->
+    <!--<div class="progress-bar" role="progressbar" [ngStyle]="drawCell(i)" style="background-color: #5fd386" aria-valuemin="0" aria-valuemax="100">{{i.name}}</div>-->
+<!--</div>-->
+<!--<br>-->
+
+<table class="container-fluid timeLine">
+  <tr>
+    <td *ngFor="let i of testConfig" [ngStyle]="drawCell(i)" class="aBlock">{{i.name}}</td>
+  </tr>
+</table>
+

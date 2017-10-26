@@ -122,7 +122,9 @@ export class TimelineComponent implements OnInit {
     console.log(percent);
     return {
       'width': percent+'%',
+      'background-color': 'lightgreen',
       'filter': `brightness(${this.cellBrightness}%)`
     }
   }
+
 }

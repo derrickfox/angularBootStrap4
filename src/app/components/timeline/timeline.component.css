@@ -53,3 +53,19 @@
 .progress-bar {
   filter: brightness(95%);
 }
+
+.issue {
+  color: red;
+}
+
+.timeLine {
+  background-color: lightgrey;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.aBlock {
+  color: white;
+}
