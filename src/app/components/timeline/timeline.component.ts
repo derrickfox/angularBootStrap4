@@ -115,22 +115,17 @@ export class TimelineComponent implements OnInit {
   }
 
   drawTimeLine() {
-    let totalWidth = this.getNumOfMonths(this.beginDay, this.endDay);
     this.earliestYear = this.startDate.getFullYear();
     this.latestYear = this.endDate.getFullYear();
-    let monthsFifth = totalWidth * (1/5);
-    let monthsHalf = totalWidth/2;
-    let monthsThreeFifths = totalWidth * (3/5);
+    let monthsFifth = (1/5);
+    let monthsHalf = 1/2;
+    let monthsThreeFifths = (3/5);
 
     this.timeLineWidths.push(0);
-    this.timeLineWidths.push(monthsFifth);
-    this.timeLineWidths.push(monthsHalf);
-    this.timeLineWidths.push(monthsThreeFifths);
-    this.timeLineWidths.push(totalWidth);
-
-    return {
-      'width': '88%'
-    }
+    this.timeLineWidths.push(20);
+    this.timeLineWidths.push(50);
+    this.timeLineWidths.push(80);
+    this.timeLineWidths.push(100);
   }
 
   drawCell(cell) {

@@ -91,12 +91,12 @@
 <br><hr>
 
 <table class="container-fluid">
-  <tr>
-    <td style="width: '${timeLineWidths[0]}'">{{earliestYear}}</td>
-    <td style="width: 25%">|</td>
-    <td style="width: '${timeLineWidths[2]}'">2017</td>
-    <td style="width: '${timeLineWidths[3]}'">|</td>
-    <td style="width: '${timeLineWidths[4]}'; float: right">{{latestYear}}</td>
+  <tr class="timeLineRow">
+    <td style="width: 20%">{{earliestYear}}</td>
+    <td style="width: 20%">|</td>
+    <td style="width: 20%">{{((latestYear - earliestYear) / 2) + earliestYear}}</td>
+    <td style="width: 20%">|</td>
+    <td style="width: 20%">{{latestYear}}</td>
   </tr>
 </table>
 <table class="container-fluid timeLine">
@@ -106,9 +106,4 @@
 </table>
 <br>
 <h4 class="kickOffText">Kick Off Date: <span class="dateText">{{date | date}}</span></h4>
-<!--<br>-->
-<!--<div class="form-group">-->
-  <!--<label for="usr">Array of Event Objects:</label>-->
-  <!--<textarea type="text" class="form-control" id="usr" [ngModel]="jsonObjectString"></textarea>-->
-<!--</div>-->
 
