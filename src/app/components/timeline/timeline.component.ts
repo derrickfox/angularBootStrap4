@@ -24,6 +24,8 @@ export class TimelineComponent implements OnInit {
   earliestYear: any;
   latestYear: any;
   testPercentage: any;
+  arrayOfBlocks: any;
+  testColor: any;
 
   constructor() { }
 
@@ -63,6 +65,9 @@ export class TimelineComponent implements OnInit {
     this.totalNumberOfMonths = this.getNumOfMonths(this.beginDay, this.endDay);
     this.drawTimeLine();
     this.testPercentage = 25;
+    this.arrayOfBlocks = [];
+    this.drawBlocks();
+    this.testColor = "red";
   }
 
   getDateRange() {
@@ -137,6 +142,32 @@ export class TimelineComponent implements OnInit {
       'background-color': '#c4ffd8',
       'filter': `brightness(${this.cellBrightness}%)`
     }
+  }
+
+  drawBlocks() {
+    let blocksObject = {};
+    this.testConfig.forEach(i => {
+      let thisObject = {
+        months: null,
+        label: null,
+        startProjectDate: null,
+        endProjectDate: null,
+        percentageOfTotalProject: null
+      };
+      let months = 0;
+      let label;
+      let startProjectDate;
+      let endProjectDate;
+      let percentageOfTotalProject;
+
+      thisObject.months = this.getNumOfMonths(i.startProject, i.endProject);
+      thisObject.label = i.name;
+      thisObject.startProjectDate = i.startProject;
+      thisObject.endProjectDate = i.endProject;
+      thisObject.percentageOfTotalProject = (thisObject.months / this.totalNumberOfMonths) * 100;
+      this.arrayOfBlocks.push(thisObject);
+    });
+    console.log(this.arrayOfBlocks);
   }
 
 }
