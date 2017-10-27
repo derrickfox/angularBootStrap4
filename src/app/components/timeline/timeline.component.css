@@ -8,25 +8,27 @@
 .label-txt {
   float: left;
   font-size: large;
-  color: grey;
+  color: blue;
 }
 
 .label-percent {
   font-size: large;
-  color: grey;
+  color: blue;
 }
 
 .label-line {
-  float: right;
-  background: grey;
+  float: top;
+  background: black;
   height:30px;
   width:2px;
   margin-left: 5px;
+  line-height: 80px;
 }
 
 .label-percent {
   float: right;
-  margin-left: -10px;
+  line-height: 40px;
+  font-size: medium;
 }
 
 .progress-bar {
@@ -36,17 +38,44 @@
   font-size: x-large;
 }
 
-#kickOffText {
+.kickOffText {
   font-size: x-large;
   font-weight: 400;
 }
 
-#dateText {
+.dateText {
   font-size: x-large;
   font-weight: 100;
 }
 
-#makeMargin {
-  margin-left: 15px;
+.issue {
+  color: red;
+}
 
+.blockText {
+  color: yellow !important;
+  filter: none !important;
+}
+
+.timeLine {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: x-large;
+}
+
+.timeLineRow {
+  text-align: center;
+}
+
+.aBlock {
+  color: blue;
+}
+
+.testBlock {
+  background-color: blue;
+  color: white;
+  border-style: solid;
+  border-width: 3px;
+  border-color: red;
 }
