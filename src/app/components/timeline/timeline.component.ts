@@ -23,6 +23,7 @@ export class TimelineComponent implements OnInit {
   timeLineWidths: any;
   earliestYear: any;
   latestYear: any;
+  testPercentage: any;
 
   constructor() { }
 
@@ -61,6 +62,7 @@ export class TimelineComponent implements OnInit {
     this.findEndDate();
     this.totalNumberOfMonths = this.getNumOfMonths(this.beginDay, this.endDay);
     this.drawTimeLine();
+    this.testPercentage = 25;
   }
 
   getDateRange() {
@@ -117,15 +119,13 @@ export class TimelineComponent implements OnInit {
   drawTimeLine() {
     this.earliestYear = this.startDate.getFullYear();
     this.latestYear = this.endDate.getFullYear();
-    let monthsFifth = (1/5);
-    let monthsHalf = 1/2;
-    let monthsThreeFifths = (3/5);
-
-    this.timeLineWidths.push(0);
-    this.timeLineWidths.push(20);
-    this.timeLineWidths.push(50);
-    this.timeLineWidths.push(80);
-    this.timeLineWidths.push(100);
+    let lengthOfThisProject = this.getNumOfMonths(this.beginDay, this.endDay);
+    let arrayOfWidths = [];
+    this.testConfig.forEach(i => {
+      let lengthOfThisStage = this.getNumOfMonths(i.startProject, i.endProject);
+      let percentage =  lengthOfThisStage / lengthOfThisProject;
+      arrayOfWidths.push(percentage)
+    })
   }
 
   drawCell(cell) {
