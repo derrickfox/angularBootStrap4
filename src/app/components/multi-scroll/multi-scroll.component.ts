@@ -17,17 +17,17 @@ export class MultiScrollComponent implements OnInit, AfterViewInit{
     this.slidesArray = [
       {
         label: 'Slide One',
-        image: 'http://cdn3-www.dogtime.com/assets/uploads/gallery/pug-dog-breed-pictures/3-sidesitting.jpg',
+        image: 'http://pubs.rsc.org/services/images/RSCpubs.ePlatform.Service.FreeContent.ImageService.svc/ImageService/Articleimage/2014/RA/c4ra10209f/c4ra10209f-f8_hi-res.gif',
         link: 'http://www.google.com'
       },
       {
         label: 'Slide Two',
-        image: 'http://media.gettyimages.com/photos/surprised-cat-picture-id561460035',
+        image: 'http://www.odinity.com/wp-content/uploads/2014/03/Absorption-of-NADH.png',
         link: 'http://www.google.com'
       },
       {
         label: 'Slide Three',
-        image: 'http://dogsaholic.com/wp-content/uploads/2015/04/Dumb-face.jpg',
+        image: 'https://www.researchgate.net/profile/Eduardo_Jose_Araujo/publication/262710716/figure/fig1/AS:296613676371968@1447729619312/Fig-1-Dispersion-graph-of-soma-and-nucleus-areas-in-NADH-diaphorase-positive-neurons-of.png',
         link: 'http://www.google.com'
       }
     ]

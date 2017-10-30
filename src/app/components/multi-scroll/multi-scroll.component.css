@@ -2,7 +2,7 @@
   background-color: black;
 }
 
-#parallelogram {
+.parallelogram {
 	width: 150px;
 	height: 100px;
 	-webkit-transform: skew(-20deg);
@@ -12,10 +12,6 @@
 }
 
 img {
-	width: 200px;
+	width: 300px;
 	height: auto;
-}
-
-.row {
-	float: center;
 }

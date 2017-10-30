@@ -14,8 +14,12 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <div class="row" style="margin-left: 38%">
-        <img *ngFor="let i of slidesArray" class="d-block img-fluid" src='{{i.image}}' alt="First slide">
+      <div class="row">
+        <span *ngFor="let i of slidesArray">
+          <a href="{{i.link}}">
+            <img class="d-block img-fluid parallelogram" src='{{i.image}}' alt="First slide" style="margin: 20px;">
+          </a>
+        </span>
       </div>
     </div>
   </div>
@@ -28,5 +32,3 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<div id="parallelogram"></div>
-<div id="parallelogram"></div>
