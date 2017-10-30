@@ -3,15 +3,14 @@
 }
 
 .parallelogram {
-	width: 150px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	-webkit-transform: skew(-20deg);
 	   -moz-transform: skew(-20deg);
 	     -o-transform: skew(-20deg);
-	background: red;
 }
 
 img {
-	width: 300px;
+	width: 200px;
 	height: auto;
 }

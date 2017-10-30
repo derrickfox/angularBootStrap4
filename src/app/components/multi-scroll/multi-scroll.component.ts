@@ -29,6 +29,31 @@ export class MultiScrollComponent implements OnInit, AfterViewInit{
         label: 'Slide Three',
         image: 'https://www.researchgate.net/profile/Eduardo_Jose_Araujo/publication/262710716/figure/fig1/AS:296613676371968@1447729619312/Fig-1-Dispersion-graph-of-soma-and-nucleus-areas-in-NADH-diaphorase-positive-neurons-of.png',
         link: 'http://www.google.com'
+      },
+      {
+        label: 'Slide Four',
+        image: 'http://s.newsweek.com/sites/www.newsweek.com/files/styles/embed-lg/public/2017/08/11/crispr-graph.jpg',
+        link: 'http://www.google.com',
+      },
+      {
+        label: 'Slide Five',
+        image: 'https://image.slidesharecdn.com/webinarturkrnpoptimization051616-160518134904/95/altr-crisprcas9-system-ribonucleoprotein-delivery-optimization-for-improved-genome-editing-5-638.jpg?cb=1463579368',
+        link: 'http://www.google.com'
+      },
+      {
+        label: 'Slide Six',
+        image: 'http://bio.biologists.org/content/biolopen/5/6/866/F1.large.jpg',
+        link: 'http://www.google.com'
+      },
+      {
+        label: 'Slide Seven',
+        image: 'https://images.nature.com/full/nature-assets/nmeth/journal/v12/n10/images/nmeth.3543-SF5.jpg',
+        link: 'http://www.google.com'
+      },
+      {
+        label: 'Slide Eight',
+        image: 'https://d2j7maqgsavdlx.cloudfront.net/content/jcb/214/2/143/F2.large.jpg',
+        link: 'http://www.google.com'
       }
     ]
   }

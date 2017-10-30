@@ -14,8 +14,8 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <div class="row">
-        <span *ngFor="let i of slidesArray">
+      <div class="row" text-align="center">
+        <span *ngFor="let i of slidesArray" style="margin: auto;">
           <a href="{{i.link}}">
             <img class="d-block img-fluid parallelogram" src='{{i.image}}' alt="First slide" style="margin: 20px;">
           </a>
