@@ -2,6 +2,15 @@
   background-color: black;
 }
 
-.carousel {
-  interval: pause;
+.parallelogram {
+	width: 200px;
+	height: 200px;
+	-webkit-transform: skew(-20deg);
+	   -moz-transform: skew(-20deg);
+	     -o-transform: skew(-20deg);
+}
+
+img {
+	width: 200px;
+	height: auto;
 }

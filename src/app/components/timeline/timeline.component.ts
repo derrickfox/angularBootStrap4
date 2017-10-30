@@ -1,5 +1,4 @@
-import { Component, OnInit} from '@angular/core';
-import {forEach} from "@angular/router/src/utils/collection";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-timeline',
